@@ -1,0 +1,1218 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='project1.css') }}">  
+    <script src="{{ url_for('static', filename='project1.js') }}"></script>
+
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Entertainment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" stype="backgroud-color: #A0A193">
+
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Movies</a></li>
+        <li><a href="#tab2">classical Music</a></li>
+        <li><a href="#tab3">Classical Crossover Music</a></li>
+        <li><a href="#tab4">Pop Music</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="tab1" class="tab active">
+            <p>
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="JdRGC-w9syA"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/schi.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Schindler's list</h3>
+            <span class="txt text-left">
+                <li>Title: Schindler's list
+                <li>Director: Steven Spielberg
+                <li>Actor: Liam Neeson
+                <li>Release: December 15, 1993 (USA)
+                <li>Duration: 3h 15m
+            </span>
+        </mytip>  
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Schindler's list" data-content = "Businessman Oskar Schindler (Liam Neeson) arrives in Krakow in 1939, ready to make his                             fortune from World War II, which has just started. When the SS begins exterminating Jews                             in the Krakow ghetto, Schindler arranges to have his workers protected to keep his factory                             in operation, but soon realizes that in so doing, he is also saving innocent lives">
+            Story Line 
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="RxrvaneULkE"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/jura.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Jurassic Park</h3>
+            <span class="txt text-left">
+                <li>Title: Jurassic Park
+                <li>Director: Steven Spielberg
+                <li>Actor: Jeff Goldblum
+                <li>Release: June 11, 1993 (USA)
+                <li>Duration: 2h 7m
+            </span>
+        </mytip>  
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Jurassic Park" data-content = "In Steven Spielberg's massive blockbuster, paleontologists Alan Grant (Sam Neill) and                             Ellie Sattler (Laura Dern) and mathematician Ian Malcolm (Jeff Goldblum) are among                             a select group chosen to tour an island theme park populated by dinosaurs created from                             prehistoric DNA. While the park's mastermind, billionaire John Hammond (Richard Attenborough),                             assures everyone that the facility is safe, they find out otherwise when various ferocious                             predators break free and go on the hunt.">
+            Story Line 
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="3hIvvho2T1k"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/jaws.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Jaws</h3>
+            <span class="txt text-left">
+                <li>Title: Jaws
+                <li>Director: Steven Spielberg
+                <li>Actor: Roy Scheider
+                <li>Release: June 1, 1975 (USA)
+                <li>Duration: 2h 10m
+            </span>
+        </mytip>
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Jaws" data-content = "When a young woman is killed by a shark while skinny-dipping near the New England                             tourist town of Amity Island, police chief Martin Brody (Roy Scheider) wants to close                             the beaches, but mayor Larry Vaughn (Murray Hamilton) overrules him, fearing that the                             loss of tourist revenue will cripple the town. Ichthyologist Matt Hooper (Richard Dreyfuss)                             and grizzled ship captain Quint (Robert Shaw) offer to help Brody capture the killer beast,                             and the trio engage in an epic battle of man vs. nature.">
+            Story Line
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="RYExstiQlLc"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/savi.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Saving private Ryan</h3>
+            <span class="txt text-left">
+                <li>Title: Saving private Ryan
+                <li>Director: Steven Spielberg
+                <li>Actor: Tom Hanks
+                <li>Release: July 24, 1998 (USA)
+                <li>Duration: 2h 50m
+            </span>
+        </mytip>
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Saving private Ryan" data-content = "Captain John Miller (Tom Hanks) takes his men behind enemy lines to find Private James Ryan,                             whose three brothers have been killed in combat. Surrounded by the brutal realties of war,                             while searching for Ryan, each man embarks upon a personal journey and discovers their                             own strength to triumph over an uncertain future with honor, decency and courage">
+            Story Line
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="Xb_4O9bYNbI"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/linc.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Lincoln</h3>
+            <span class="txt text-left">
+                <li>Title: Lincoln
+                <li>Director: Steven Spielberg
+                <li>Actor: Daniel Day-Lewis
+                <li>Release: November 9, 2012 (USA)
+                <li>Duration: 2h
+            </span>
+        </mytip>
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Lincoln" data-content = "With the nation embroiled in still another year with the high death count of Civil War,                             President Abraham Lincoln (Daniel Day-Lewis) brings the full measure of his passion,                             humanity and political skill to what would become his defining legacy: to end the war                             and permanently abolish slavery through the 13th Amendment. Having great courage, acumen                             and moral fortitude, Lincoln pushes forward to compel the nation, and those in government                             who oppose him, to aim toward a greater good for all mankind.">
+            Story Line
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="0vxOhd4qlnA"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/inte.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Interstellar</h3>
+            <span class="txt text-left">
+                <li>Title: Interstellar
+                <li>Director: Christopher Nolan
+                <li>Actor: Matthew McConaughey
+                <li>Release: November 5, 2014 (USA)
+                <li>Duration: 2h 49m
+            </span>
+        </mytip>
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Interstellar" data-content = "In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet                             uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans                             to save mankind by transporting Earth's population to a new home via a wormhole. But first,                             Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through                             the wormhole and across the galaxy to find out which of three planets could be mankind's new home">
+            Story Line
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="Sqgv1Qz1at4"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/mano.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Man of Steel</h3>
+            <span class="txt text-left">
+                <li>Title: Man of Steel
+                <li>Director: hristopher Nolan
+                <li>Actor: Henry Cavill
+                <li>Release: June 14, 2013 (USA)
+                <li>Duration: 2h 28m
+            </span>
+        </mytip>
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Man of Steel" data-content = "With the imminent destruction of Krypton, their home planet, Jor-El (Russell Crowe) and his wife                             seek to preserve their race by sending their infant son to Earth. The child's spacecraft lands at                             the farm of Jonathan (Kevin Costner) and Martha (Diane Lane) Kent, who name him Clark and raise                             him as their own son. Though his extraordinary abilities have led to the adult Clark (Henry Cavill)                             living on the fringe of society, he finds he must become a hero to save those he loves from a dire threat">
+            Story Line
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="GokKUqLcvD8"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/thed.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>The Dark Knight Rises</h3>
+            <span class="txt text-left">
+                <li>Title: The Dark Knight Rises
+                <li>Director: Chritian Bale
+                <li>Actor: Tom Hardy
+                <li>Release: July 20, 2012 (USA)
+                <li>Duration: 2h 45m
+            </span>
+        </mytip>
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="The Dark Knight Rises" data-content = "It has been eight years since Batman (Christian Bale), in collusion with Commissioner Gordon                             (Gary Oldman), vanished into the night. Assuming responsibility for the death of Harvey Dent,                             Batman sacrificed everything for what he and Gordon hoped would be the greater good. However,                             the arrival of a cunning cat burglar (Anne Hathaway) and a merciless terrorist named Bane (Tom Hardy)                             force Batman out of exile and into a battle he may not be able to win">
+            Story Line
+        </a>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center"  style="display: block;padding-bottom: 40px">
+    <div class="movie-tile" data-trailer-youtube-id="8hP9D6kZseM"
+        data-toggle="modal" data-target="#trailer">
+        <img src="../static/images/ince.jpg" style="width:220px; height:342px">
+    </div>
+    <div>
+        <mytip class="mytooltip top" href="#">
+            <h3>Inception</h3>
+            <span class="txt text-left">
+                <li>Title: Inception
+                <li>Director: Christopher Nolan
+                <li>Actor: Leonardo Dicarpio
+                <li>Release: July 13, 2010 (USA)
+                <li>Duration: 2h 28m
+            </span>
+        </mytip>
+    </div>
+    <div class="row"></div>
+    <div>
+        <a href="JavaScript:void(0)"  data-toggle = "popover" data-trigger="focus"
+            title="Inception" data-content = "Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams                             and steal their secrets from their subconscious. His skill has made him a hot commodity                             in the world of corporate espionage but has also cost him everything he loves. Cobb gets                             a chance at redemption when he is offered a seemingly impossible task: Plant an idea in                             someone's mind. If he succeeds, it will be the perfect crime, but a dangerous enemy                             anticipates Cobb's every move.">
+            Story Line
+        </a>
+    </div>
+</div>
+</p>
+        </div>
+        <div id="tab2" class="tab">
+            <p>
+<div class="bs-example">
+    <div class="panel-group" id="accordion1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1"><em>Sort by title</em></a>
+                </h4>
+            </div>
+            <div id="collapseOne1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="CvFH_6DNRCY"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Clair de Lune</u></div></td>
+        <td>Claude Debussy</td>
+        <td>Moura Lympany</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="OYiz_u0tDwM"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Fantasy in D minor K397</u></div></td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Mitsuko Uchida</td>
+        <td>7:18</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="A6s49OKp6aE"
+            data-toggle="modal" data-target="#trailer" href="#"><u>First Arabesque</u></div></td>
+        <td>Claude Debussy</td>
+        <td>Stephen Malinowski</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="4Tr0otuiQuU"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Moonlight Sonata (full)</u></div></td>
+        <td>Ludwig van Bethoven</td>
+        <td>Andrea Romano</td>
+        <td>15:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="vJpAIOFN5WQ"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Nocturne op.72</u></div></td>
+        <td>Fryderyk Chopin</td>
+        <td>Artur Rubinstein</td>
+        <td>4:44</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9E6b3swbnWg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Nocturne op.9 Number 2</u></div></td>
+        <td>Fryderyk Chopin</td>
+        <td>Andrea Romano</td>
+        <td>4:29</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="HMjQygwPI1c"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Turkish March</u></div></td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Ronald Brautigam</td>
+        <td>4:00</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1"><em>Sort by author</em></a>
+                </h4>
+            </div>
+            <div id="collapseTwo1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="CvFH_6DNRCY"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Clair de Lune</u></div></td>
+        <td>Claude Debussy</td>
+        <td>Moura Lympany</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="A6s49OKp6aE"
+            data-toggle="modal" data-target="#trailer" href="#"><u>First Arabesque</u></div></td>
+        <td>Claude Debussy</td>
+        <td>Stephen Malinowski</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="vJpAIOFN5WQ"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Nocturne op.72</u></div></td>
+        <td>Fryderyk Chopin</td>
+        <td>Artur Rubinstein</td>
+        <td>4:44</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9E6b3swbnWg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Nocturne op.9 Number 2</u></div></td>
+        <td>Fryderyk Chopin</td>
+        <td>Andrea Romano</td>
+        <td>4:29</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="4Tr0otuiQuU"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Moonlight Sonata (full)</u></div></td>
+        <td>Ludwig van Bethoven</td>
+        <td>Andrea Romano</td>
+        <td>15:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="OYiz_u0tDwM"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Fantasy in D minor K397</u></div></td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Mitsuko Uchida</td>
+        <td>7:18</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="HMjQygwPI1c"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Turkish March</u></div></td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Ronald Brautigam</td>
+        <td>4:00</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1"><em>Sort by performer</em></a>
+                </h4>
+            </div>
+            <div id="collapseThree1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="4Tr0otuiQuU"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Moonlight Sonata (full)</u></div></td>
+        <td>Ludwig van Bethoven</td>
+        <td>Andrea Romano</td>
+        <td>15:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9E6b3swbnWg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Nocturne op.9 Number 2</u></div></td>
+        <td>Fryderyk Chopin</td>
+        <td>Andrea Romano</td>
+        <td>4:29</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="vJpAIOFN5WQ"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Nocturne op.72</u></div></td>
+        <td>Fryderyk Chopin</td>
+        <td>Artur Rubinstein</td>
+        <td>4:44</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="OYiz_u0tDwM"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Fantasy in D minor K397</u></div></td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Mitsuko Uchida</td>
+        <td>7:18</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="CvFH_6DNRCY"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Clair de Lune</u></div></td>
+        <td>Claude Debussy</td>
+        <td>Moura Lympany</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="HMjQygwPI1c"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Turkish March</u></div></td>
+        <td>Wolfgang Amadeus Mozart</td>
+        <td>Ronald Brautigam</td>
+        <td>4:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="A6s49OKp6aE"
+            data-toggle="modal" data-target="#trailer" href="#"><u>First Arabesque</u></div></td>
+        <td>Claude Debussy</td>
+        <td>Stephen Malinowski</td>
+        <td>5:00</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</p>
+        </div>
+        <div id="tab3" class="tab">
+            <p>
+<div class="bs-example">
+    <div class="panel-group" id="accordion2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2"><em>Sort by title</em></a>
+                </h4>
+            </div>
+            <div id="collapseOne2" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9fAZIQ-vpdw"
+            data-toggle="modal" data-target="#trailer" href="#"><u>All of me</u></div></td>
+        <td></td>
+        <td>Jon Schimdt</td>
+        <td>3:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="skVo8AYWRYk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Batman Evolution</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>6:20</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="aHjpOzsQ9YI"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Crystallize</u></div></td>
+        <td></td>
+        <td>Lindsey Stirling</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="NCaH-qqTWpk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Kungfu Piano</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>4:25</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9p0BqUcQ7i0"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Mission Impossible</u></div></td>
+        <td></td>
+        <td>The Piano Guys/Lindsey Stirling</td>
+        <td>5:20</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="CHV6BjuQOZQ"
+            data-toggle="modal" data-target="#trailer" href="#"><u>The Misssion</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>3:50</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="8P9hAN-teOU"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Waterfall</u></div></td>
+        <td></td>
+        <td>Jon Schimdt</td>
+        <td>3:30</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2"><em>Sort by author</em></a>
+                </h4>
+            </div>
+            <div id="collapseTwo2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="skVo8AYWRYk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Batman Evolution</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>6:20</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="aHjpOzsQ9YI"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Crystallize</u></div></td>
+        <td></td>
+        <td>Lindsey Stirling</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9fAZIQ-vpdw"
+            data-toggle="modal" data-target="#trailer" href="#"><u>All of me</u></div></td>
+        <td></td>
+        <td>Jon Schimdt</td>
+        <td>3:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="8P9hAN-teOU"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Waterfall</u></div></td>
+        <td></td>
+        <td>Jon Schimdt</td>
+        <td>3:30</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="NCaH-qqTWpk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Kungfu Piano</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>4:25</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9p0BqUcQ7i0"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Mission Impossible</u></div></td>
+        <td></td>
+        <td>The Piano Guys/Lindsey Stirling</td>
+        <td>5:20</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="CHV6BjuQOZQ"
+            data-toggle="modal" data-target="#trailer" href="#"><u>The Misssion</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>3:50</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2"><em>Sort by performer</em></a>
+                </h4>
+            </div>
+            <div id="collapseThree2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9fAZIQ-vpdw"
+            data-toggle="modal" data-target="#trailer" href="#"><u>All of me</u></div></td>
+        <td></td>
+        <td>Jon Schimdt</td>
+        <td>3:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="8P9hAN-teOU"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Waterfall</u></div></td>
+        <td></td>
+        <td>Jon Schimdt</td>
+        <td>3:30</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="aHjpOzsQ9YI"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Crystallize</u></div></td>
+        <td></td>
+        <td>Lindsey Stirling</td>
+        <td>5:00</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="skVo8AYWRYk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Batman Evolution</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>6:20</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="NCaH-qqTWpk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Kungfu Piano</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>4:25</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="CHV6BjuQOZQ"
+            data-toggle="modal" data-target="#trailer" href="#"><u>The Misssion</u></div></td>
+        <td></td>
+        <td>The Piano Guys</td>
+        <td>3:50</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="9p0BqUcQ7i0"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Mission Impossible</u></div></td>
+        <td></td>
+        <td>The Piano Guys/Lindsey Stirling</td>
+        <td>5:20</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</p>
+        </div>
+        <div id="tab4" class="tab">
+            <p>
+<div class="bs-example">
+    <div class="panel-group" id="accordion3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3"><em>Sort by title</em></a>
+                </h4>
+            </div>
+            <div id="collapseOne3" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="450p7goxZqg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>All of Me</u></div></td>
+        <td>John Legend</td>
+        <td>John Legend</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="dsUXAEzaC3Q"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Bad</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="y62OlGvC-bk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Dancing Queen</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>3:51</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="y6Sxv-sUYtM"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Happy</u></div></td>
+        <td>Pharrel Williams</td>
+        <td>Pharrel Williams</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="Km6i04BeCKs"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Happy new year</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>4:27</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="hlP1lBkviqk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Knowing me , knowing you</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>3:58</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="h_D3VFfhvs4"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Smooth Criminal</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="MYSVMgRr6pw"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Take Me To Church</u></div></td>
+        <td>Hozier</td>
+        <td>Hozier</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="0sryOCnuj7c"
+            data-toggle="modal" data-target="#trailer" href="#"><u>The winner takes it all</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>4:58</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="sOnqjkJTMaA"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Thriller</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="JRfuAukYTKg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Titanium</u></div></td>
+        <td>David Guetta</td>
+        <td>David Guetta ft. Sia</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="Sv6dMFF_yts"
+            data-toggle="modal" data-target="#trailer" href="#"><u>We Are Young</u></div></td>
+        <td>Janelle Monae</td>
+        <td>Janelle Monae</td>
+        <td></td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3"><em>Sort by author</em></a>
+                </h4>
+            </div>
+            <div id="collapseTwo3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="hlP1lBkviqk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Knowing me , knowing you</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>3:58</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="Km6i04BeCKs"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Happy new year</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>4:27</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="0sryOCnuj7c"
+            data-toggle="modal" data-target="#trailer" href="#"><u>The winner takes it all</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>4:58</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="y62OlGvC-bk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Dancing Queen</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>3:51</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="JRfuAukYTKg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Titanium</u></div></td>
+        <td>David Guetta</td>
+        <td>David Guetta ft. Sia</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="MYSVMgRr6pw"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Take Me To Church</u></div></td>
+        <td>Hozier</td>
+        <td>Hozier</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="Sv6dMFF_yts"
+            data-toggle="modal" data-target="#trailer" href="#"><u>We Are Young</u></div></td>
+        <td>Janelle Monae</td>
+        <td>Janelle Monae</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="450p7goxZqg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>All of Me</u></div></td>
+        <td>John Legend</td>
+        <td>John Legend</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="dsUXAEzaC3Q"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Bad</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="h_D3VFfhvs4"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Smooth Criminal</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="sOnqjkJTMaA"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Thriller</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="y6Sxv-sUYtM"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Happy</u></div></td>
+        <td>Pharrel Williams</td>
+        <td>Pharrel Williams</td>
+        <td></td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3"><em>Sort by performer</em></a>
+                </h4>
+            </div>
+            <div id="collapseThree3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Performer</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="hlP1lBkviqk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Knowing me , knowing you</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>3:58</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="Km6i04BeCKs"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Happy new year</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>4:27</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="0sryOCnuj7c"
+            data-toggle="modal" data-target="#trailer" href="#"><u>The winner takes it all</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>4:58</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="y62OlGvC-bk"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Dancing Queen</u></div></td>
+        <td>ABBA</td>
+        <td>ABBA</td>
+        <td>3:51</td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="JRfuAukYTKg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Titanium</u></div></td>
+        <td>David Guetta</td>
+        <td>David Guetta ft. Sia</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="MYSVMgRr6pw"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Take Me To Church</u></div></td>
+        <td>Hozier</td>
+        <td>Hozier</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="Sv6dMFF_yts"
+            data-toggle="modal" data-target="#trailer" href="#"><u>We Are Young</u></div></td>
+        <td>Janelle Monae</td>
+        <td>Janelle Monae</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="450p7goxZqg"
+            data-toggle="modal" data-target="#trailer" href="#"><u>All of Me</u></div></td>
+        <td>John Legend</td>
+        <td>John Legend</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="dsUXAEzaC3Q"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Bad</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="h_D3VFfhvs4"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Smooth Criminal</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="sOnqjkJTMaA"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Thriller</u></div></td>
+        <td>Michael Jackson</td>
+        <td>Michael Jackson</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><div class="music-tile" data-trailer-youtube-id="y6Sxv-sUYtM"
+            data-toggle="modal" data-target="#trailer" href="#"><u>Happy</u></div></td>
+        <td>Pharrel Williams</td>
+        <td>Pharrel Williams</td>
+        <td></td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </body>
+</html>

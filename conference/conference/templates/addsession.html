@@ -1,0 +1,138 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div id="myModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title"  align='center'>Add a New Session</h3>
+            </div>
+            <div class="modal-body">
+                <form action = "{{url_for('addSession', conference_id = conference.id)}}" enctype="multipart/form-data" method ='POST'>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <div><label>Name</label></div>
+                    <div>
+                        <textarea name="name" style="width:100%;height:70px;" maxlength='250' required='true'></textarea>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+                  
+                    <div><label for="type_of_session_input">Type_of_session</label></div>
+                    <div>                   
+                        <input type="text" id="type_of_session_input" name='type_of_session' size='20' list="type_of_session_datalist"  maxlength='30'>
+                        <datalist id="type_of_session_datalist"></datalist>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+
+                    <div><label>Date</label></div>
+                    <div>
+                        <input type='date' name='date' required='true'>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+                 
+                    <div><label>Start time</label></div>
+                    <div>
+                        <input type='time' name='start_time' required='true'>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+                    
+                    <div><label>Duration</label></div>
+                    <div>
+                        <input type='text' size='10' name='duration'  maxlength='20'>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+
+                    <div><label for="location_input">Location</label></div>
+                    <div>
+                        <input type="text" id="location_input" name='location' style="width:100%;" list="location_datalist"  maxlength='250'>
+                        <datalist id="location_datalist"></datalist>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+
+                    <div><label>Room</label></div>
+                    <div>
+                        <input type ='text' size='10' name='room' maxlength='10'>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+
+                    <div><label for="speaker_input">Speaker</label></div>
+                    <div>
+                        <input type="text" id="speaker_input" name='speaker' style="width:100%;" list="speaker_datalist" maxlength='250'>
+                        <datalist id="speaker_datalist"></datalist>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+
+                    <div><label>Highlights</label></div>
+                    <div>
+                        <textarea name="highlights" style="width:100%;height:70px;" maxlength='250'></textarea>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+
+                    <br><br>
+                    <div style="width:260px; float:left;">
+                    <p><b>Upload Documents </b><input type='file' name='file[]' multiple=''></p>
+                    </div>
+ 
+                    <p align='center'>
+                    <button type ='submit' class="btn btn-primary">Submit</button>
+                    <a href="{{url_for('showSessions',conference_id = conference.id)}}" class="btn btn-default">Cancel</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+var speaker_dataList = document.getElementById('speaker_datalist');
+var speaker_input = document.getElementById('speaker_input');
+var location_dataList = document.getElementById('location_datalist');
+var location_input = document.getElementById('location_input');
+var type_of_session_dataList = document.getElementById('type_of_session_datalist');
+var type_of_session_input = document.getElementById('type_of_session_input');
+
+// Create a new XMLHttpRequest.
+var request = new XMLHttpRequest();
+request.responseText="";
+
+// Handle state changes for the request.
+request.onreadystatechange = function(response) {
+  if (request.readyState === 4) {
+
+    if (request.status === 200) {
+      // Parse the JSON, get the lists of names for speaker, type of session, and location.
+      var jsonOptions = JSON.parse(request.responseText);
+      
+      // Make the lists of names.
+      jsonOptions.speaker.forEach(function(item) {
+        var option = document.createElement('option');
+        option.value = item;
+        speaker_dataList.appendChild(option);
+      });
+
+      jsonOptions.location.forEach(function(item) {
+        var option = document.createElement('option');
+        option.value = item;
+        location_dataList.appendChild(option);
+      });
+
+      jsonOptions.type_of_session.forEach(function(item) {
+        var option = document.createElement('option');
+        option.value = item;
+        type_of_session_dataList.appendChild(option);
+      });
+      
+      // Update the placeholder text.
+      speaker_input= speaker_datalist;
+      location_input = location_datalist;
+      type_of_session_input = type_of_session_dataList;
+    }
+  }
+};
+
+// Set up and make the request.
+request.open('GET', '/static/names.json', true);
+request.send();
+</script>
+{% endblock %}

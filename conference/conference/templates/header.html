@@ -1,0 +1,44 @@
+<div class="row top-menu">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header col-sm-3">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand active" href="/" style="font-size:1.3em">Home</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav col-sm-6">
+            <li ng-class="{ active: isActive('/conference')}" ng-click="collapseNavbar()" 
+                style="font-size:1.2em">
+                <a href="{{url_for('showConferences')}}">Show Conferences</a></li>
+            {% if user_id %}
+                <li  ng-class="{ active: isActive('/conference/addConference/')}" 
+                     ng-click="collapseNavbar()" class="dropdown" style="font-size:1.2em">
+                <a class="dropdown-toggle" data-toggle="dropdown">{{user_name}}
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" style="font-size:1.1em">
+                <li><a href="{{url_for('showCreatedConferences')}}">My Created Conferences</a></li>
+                <li><a href="{{url_for('showRegisteredConferences')}}">My Registered Conferences</a></li>
+                <li><a href="{{url_for('showWishList', user_id = user_id)}}">My Wish List</a></li>
+                <li><a href="{{url_for('addConference')}}">Create a Conference</a></li>
+                <li><a href="{{url_for('conferenceRegister')}}">Register to Conference</a></li>
+                  </ul>
+                </li>
+            {% endif %}
+          </ul>
+          <ul class="nav navbar-nav navbar-left col-sm-3" style="font-size:1.2em">
+                {% if user_id %}
+                    <li><a href="{{url_for('disconnect')}}">Log out</a></li>
+                {% else %}
+                    <li><a href="{{url_for('showLogin')}}">Log in</a></li>
+                {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>    

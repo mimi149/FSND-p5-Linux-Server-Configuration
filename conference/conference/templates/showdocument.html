@@ -1,0 +1,115 @@
+{% extends "main.html" %}
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.myCarouselImg img {
+  width: auto;
+  height: 500px;
+  margin: auto;
+  min-height: 500px; !important;
+  max-height: 500px; !important;
+}
+</style>
+<div class="container">
+  <p align='center'>Session</p>
+  <h3 style="color:#FF1919" align="center"> {{session_name}} </h3>
+  <div id="myCarousel" class="carousel slide" data-interval="false" data-wrap="true">
+    {% if image_filenames and image_filenames!= [] %}
+        <h4>Images</h4>
+    {% endif %}
+    <ol class="carousel-indicators">
+        {% if image_filenames and image_filenames!= [] %}
+            <li data-target="#myCarousel" class="active"></li>
+
+            {% for filename in image_filenames %}
+                {% if filename!= image_filenames[0] %}            
+                    <li data-target="#myCarousel"></li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        {% if image_filenames and image_filenames!= [] %}
+
+            <div class="item myCarouselImg active">
+                <img class="myCarouselImg" src={{image_filenames[0]}} alt="Image">
+            </div>
+            {% for filename in image_filenames %}
+                {% if filename!= image_filenames[0] %}        
+                    <div class="item myCarouselImg">
+                        <img class="myCarouselImg" src={{filename}} alt="Image" width="460" height="345">
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        <!-- Left and right controls -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><h1>&lsaquo;</h1></a>        
+        <a class="carousel-control right" href="#myCarousel" data-slide="next"><h1>&rsaquo;</h1></a>        
+    </div>
+  </div>
+</div>
+<div class='container'>
+    <form action = "{{url_for('showDocument', conference_id = conference_id, session_id = session_id)}}"
+          method='post'>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+        <table class="table table-striped table-responsive">
+            <thead>
+                <tr>
+                    {% if document_filenames and document_filenames != [] %}
+                        <th>Select to Download</th>
+                        {% if image_filenames and image_filenames!= [] %}
+                            <th style='text-align:center' width='70%'>Other Documents</th>
+                        {% else %}
+                            <th style='text-align:center' width='70%'>Documents</th>
+                        {% endif %}                           
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                <div class="checkbox">
+                <label>
+                {% if document_filenames and document_filenames != [] %}
+                    {% for filename in document_filenames %}
+                    <tr>
+                        <td data-th="Select to Download">
+                            <input type="checkbox" name="check" value="{{filename}}">
+                        </td>
+                        <td>{{filename}}</td>
+                    </tr>
+                    {% endfor %}
+                {% endif %}
+                </label>
+                </div>                          
+            </tbody>
+        </table>
+        <br>
+        {% if document_filenames and document_filenames != [] %}
+            <button type ='submit' class="btn btn-primary">Download</button>
+        {% endif %}
+    </form>
+    <div class='row' align='center'>
+        <a href="{{url_for('showSessions',conference_id = conference_id)}}" 
+           class="btn btn-default">Close</a>
+    </div>
+    <br><br><br>
+</div>
+
+<script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel({interval: false, wrap: true});
+    
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#myCarousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#myCarousel").carousel("next");
+    });
+});
+</script>
+</body>
+</html>
+{% endblock %}

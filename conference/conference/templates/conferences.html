@@ -1,0 +1,65 @@
+{% extends "main.html" %}
+{% block content %}
+
+{% include "header.html" %}
+<div class="container">
+        <div  class="col-lg-3">
+                <h2>Conferences</h2> 
+
+                {% for conference in conferences %}
+                <li style='font-weight: bold;'>
+                    <a href="{{url_for('showSessions',conference_id = conference.id)}}">
+                        {{conference.name}}
+                    </a>
+                    <br><br>
+                </li>
+                {% endfor %}
+                
+        </div>
+        <div class="col-lg-9" style="padding-right:20px; border-left: 1px solid #ccc;">
+            <h3>Latest Sessions</h3>
+            <p>(Order by date and time)</p>
+            <table class="table table-striped table-responsive">
+                <thead  text-align='center'>
+                    <tr>
+                        <th width='25%'>Session Name</th>
+                        <th width='8%'>Date</th>
+                        <th width='5%'>Time</th>
+                        <th width='3%'>Duration</th>
+                        <th width='7%'>Type</th>
+                        <th width='19%'>Highlight</th>
+                        <th width='15%'>Speaker</th>
+                        <th width='15%'>Location</th>
+                        <th width='3%'>Room</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for session in sessions %}
+                    <tr>
+                        <td><a href="{{url_for('showSessions',conference_id = session.conference.id)}}"
+                               data-toggle="tooltip" 
+                               title="Select to see conference {{session.conference.name}}">
+                               {{session.name}}
+                            </a>
+                        </td>
+                        <td>{{session.date}}</td>
+                        <td>{{session.time}}</td>
+                        <td>{{session.duration}}</td>
+                        <td>{{session.type_of_session.name}}</td>
+                        <td>{{session.highlights}}</td>
+                        <td>{{session.speaker.name}}</td>
+                        <td>{{session.location.name}}</td>
+                        <td>{{session.room}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+{% endblock %}

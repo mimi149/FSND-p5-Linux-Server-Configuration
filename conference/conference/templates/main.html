@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Conference Central</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='fileinput.min.css') }}">   
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-table.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='offcanvas.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap-cosmo.css') }}">
+
+    <!-- Custom CSS -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='new_simple-sidebar.css') }}">  
+
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap-table.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap-table-zh-CN.js') }}"></script>    
+
+    <!--FOR GOOGLE SIGN IN -->
+    <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+        });
+    </script>
+ 
+</head>
+
+{% block content %}
+{% endblock %}
+
+</html>

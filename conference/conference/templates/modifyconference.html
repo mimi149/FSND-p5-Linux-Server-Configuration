@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div id="myModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" align='center'>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modify a Conference</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action = "{{url_for('modifyConference', conference_id = conference.id)}}" method ='post'>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+
+                    <div><label>Name</label></div>
+                    <div>
+                        <textarea type='text' style="width:95%;height:70px;" name='name' required='true'>{{conference.name}}</textarea>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+
+                    <div><label>Date</label></div>
+                    <div style="width:450px;float:left;">
+                        <input type='date' name='date' required='true' value={{conference.date}}>
+                    </div>
+                    <div class="noSel" style="clear:both;"></div>
+                    <br>
+                    <p align='center'>
+                    <button type ='submit' class="btn btn-primary">Submit</button>
+                    <a href="{{url_for('showSessions', conference_id = conference.id)}}" class="btn btn-default">Cancel</a>
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

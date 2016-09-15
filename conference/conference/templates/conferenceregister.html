@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% include "header.html" %}
+{% block content %}
+<div class="container">
+    <h2>Conferences</h2>
+    <form action = "{{ url_for('conferenceRegister', user_id = user_id)}}" method ='post'>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+        <table class="table">
+            <thead text-align='center'>
+                <tr>
+                    {% if user_id %}
+                        <th width='10%'>Register</th>
+                    {% endif %}
+                    <th width='80%'>Conference</th>
+                    <th width='10%'>Start day</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <div class="checkbox">
+                <label>
+                {% for conference in conferences %}
+                <tr>
+                    {% if user_id %}
+                        <td><input type="checkbox" name="check" value="{{conference.id}}"></td>
+                    {% endif %}
+                    <td>{{conference.name}}</td>
+                    <td>{{conference.date}}</td>
+                </tr>
+                {% endfor %}
+                </label>
+                </div>                          
+            </tbody>
+        </table>
+        {% if user_id and conferences != [] %}
+        <button type ='submit' class="btn btn-primary">Submit</button>
+        <a href="{{url_for('showConferences')}}" class="btn btn-default">Cancel</a>                    
+        {% endif %}
+    </form>
+</div>
+{% endblock %}

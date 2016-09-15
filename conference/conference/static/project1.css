@@ -1,0 +1,152 @@
+body {
+    padding-top: 80px;
+    background-color:#BDF5EB;
+}
+#trailer .modal-dialog {
+    margin-top: 200px;
+    width: 640px;
+    height: 480px;
+}
+.hanging-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    z-index: 9001;
+}
+#trailer-video {
+    width: 100%;
+    height: 100%;
+}
+.movie-tile {
+    width: 220px;
+    height: 342px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.movie-tile:hover {
+    background-color: #46DA85;
+    cursor: pointer;
+}
+.music-tile:hover {
+    cursor: pointer;
+}
+
+.scale-media {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.scale-media iframe {
+    border: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+}
+
+
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tab-links {
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+.tab-links li {
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    float:left;
+    list-style:none;
+}
+
+.tab-links a {
+    margin:0px 0px 0px 0px;
+    padding:10px 20px 10px 20px;
+
+    margin: 0.2px;
+    display:inline-block;
+    border-radius:10px 10px 0px 0px;
+    background:#7FB5DA;
+    font-size:16px;
+    font-weight:600;
+    color:#4c4c4c;
+    transition:all linear 0.15s;
+}
+
+.tab-links a:hover {
+    background:#a7cce5;
+    text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+    background:#46DA85;
+    color:#A61C50;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+    margin:0px 0px 0px 0px;
+    padding:10px 10px 10px 10px;
+    height: 1600px;
+    box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+    background:#46DA85;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+    color: #010901
+}
+
+/*-----MyTooltip-----*/
+.mytooltip {
+    position:relative;
+}
+
+.mytooltip .txt {
+    width:350px;
+    padding:10px 15px;
+    display:none;
+    position:absolute;
+    z-index:1000;
+    border-radius:3px;
+    background:rgba(0,0,0,0.85);
+    /* Type */
+    font-size:18px;
+    text-shadow:-1px 1px 0px rgba(0,0,0,0.2);
+    line-height:150%;
+    color:#fff;
+}
+
+.mytooltip.top .txt {
+    bottom:20px;
+    left:-10px;
+}
+ 
+.mytooltip.top .txt:before {
+    bottom:-5px;
+    left:10px;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent; 
+    border-top:5px solid rgba(0,0,0,0.75); 
+}
+.mytooltip:hover .txt { 
+    display:inline-block; 
+    placement : 'top';
+}

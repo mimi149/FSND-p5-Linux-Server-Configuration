@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% block content %}    
+
+<div id="myModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" align='center'>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Delete a Conference</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action = "{{ url_for('deleteConference', conference_id = conference.id)}}" method ='post'>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <p>Name: <b>{{conference.name}}</b></p>
+                    <p>Are you sure to want to delete this conference?</p>
+                    <p align='center'>
+                    <button type ='submit' class="btn btn-primary">Submit</button>
+                    <a href="{{url_for('showSessions', conference_id = conference.id)}}" class="btn btn-default">Cancel</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

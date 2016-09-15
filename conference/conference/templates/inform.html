@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% block content %}    
+
+<div id="myModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" align='center'>{{task}}</h4>
+            </div>
+            <div class="modal-body">
+
+                <form>
+                    <p>{{info}}</p>
+                    <p align='center'>
+                    {% if url == 'showConferences' %}
+                        <a href="{{url_for('showConferences')}}" class="btn btn-default">OK</a>
+                    {% elif url == 'showSessions' %}    
+                        <a href="{{url_for('showSessions',conference_id = conference_id)}}" class="btn btn-default">OK</a>
+                    {% elif url == 'showWishList' %}
+                        <a href="{{url_for('showWishList',user_id = user_id)}}" class="btn btn-default">OK</a>
+                    {% elif url == 'showRegisteredConferences' %}
+                        <a href="{{url_for('showRegisteredConferences')}}" class="btn btn-default">OK</a>
+                    {% endif %}    
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
