@@ -1,9 +1,11 @@
 # P5_Linux-Server-Configuration
 This is the project 5 of the Udacity's Full Stack Web Developer Nanodegree Program.  
+
 The project's task is a baseline installation of a Ubuntu Linux distribution on a virtual machine to host a Flask web application (project 3). This includes the installation of updates, securing the system from a number of attack vectors and installing/configuring web and database servers.
 
 You can see the final project at https://fsnd-p3-conference.herokuapp.com/
-Please read more information in document.pdf (database design and program implementation).
+
+Please read more information in **document.pdf** (database design and program implementation).
 
 ## Server info
 IP address: 52.41.96.234, port:2200  
