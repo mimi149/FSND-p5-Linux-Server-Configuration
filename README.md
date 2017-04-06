@@ -3,7 +3,7 @@ This is the project 5 of the Udacity's Full Stack Web Developer Nanodegree Progr
 
 The project's task is a baseline installation of a Ubuntu Linux distribution on a virtual machine to host a Flask web application (project 3). This includes the installation of updates, securing the system from a number of attack vectors and installing/configuring web and database servers.
 
-You can see the final project at https://fsnd-p3-conference.herokuapp.com/
+You can see the final project at https://mimi-app.herokuapp.com/
 
 Please read more information in **document.pdf** (database design and program implementation).
 
